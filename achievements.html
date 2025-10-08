@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Achievements - PCC BSIT</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background: url("images/397c71de-0b4e-4e4c-a2ea-e25bdf6bbf0f (1).jpeg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Navigation Bar */
+    header {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 10px 0;
+      position: fixed; /* stays at top */
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffcc00; /* link color */
+      font-weight: bold;
+      text-shadow: 0 0 5px #ffcc00;
+      transition: color 0.3s, text-shadow 0.3s;
+      font-size: 16px;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff; /* hover color */
+      text-shadow: 0 0 10px #ffcc00;
+    }
+
+    /* Main content padding to avoid overlap with fixed nav */
+    main {
+      padding-top: 90px; /* adjust based on header height */
+    }
+
+    .achievements {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: rgba(0, 0, 0, 0.35); /* slightly transparent */
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 1200px;
+    }
+
+    .achievements h1 {
+      font-size: 42px;
+      color: #00ffee;
+      text-shadow: 0 0 20px #00ffee;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    }
+
+    /* Lightbox styles */
+    #lightbox {
+      position: fixed;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffee;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .gallery img {
+        max-width: 90%;
+        height: auto;
+      }
+
+      .achievements {
+        padding: 40px 15px;
+        margin: 20px;
+      }
+
+      nav ul li {
+        margin: 10px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="achievements.html">Student Achievements</a></li>
+        <li><a href="event.html">Event Activities</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="achievements">
+      <h1>Student Achievements</h1>
+      <div class="gallery">
+       <img src="D:\WalagWebsite\Student Achievements images\a678ae2a-8461-42e9-8540-35c769609d9c.jpeg">
+        <img src="D:\WalagWebsite\Student Achievements images\c7984e22-ea5d-405f-b0cd-dd5fb558e063.jpeg">
+        <img src="D:\WalagWebsite\Student Achievements images\406e5bfc-3e97-4ee5-a96e-99fed8391e61.jpeg">
+        <img src="D:\WalagWebsite\Student Achievements images\cb4507e5-6d97-4e57-af75-cafc9d1766e0.jpeg">
+        <img src="D:\WalagWebsite\Student Achievements images\863ffe27-e919-4f57-ac95-02711caf63b4.jpeg">
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox container -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Philippine Countryville College - BSIT Program. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const images = document.querySelectorAll('.gallery img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

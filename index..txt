@@ -1,0 +1,176 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSIT at PCC</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+            background-image: url('images/165db189-ff0d-43e4-bf35-5809ca4384f3.jpg'); /* ✅ Correct relative path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .glow-text {
+            font-size: 48px;
+            text-shadow: 0 0 20px #ff0000;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .glow-text-subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ff0000;
+        }
+
+        .hire-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #007bff;
+        }
+
+        .hire-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 30px #00ccff;
+        }
+
+        .info {
+            padding: 40px;
+            background-color: #111;
+        }
+
+        .info h2 {
+            font-size: 36px;
+            color: #00ffcc;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff0000; }
+            100% { text-shadow: 0 0 30px #ff0000; }
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .feature {
+                width: 80%;
+            }
+
+            .glow-text {
+                font-size: 32px;
+            }
+
+            .glow-text-subtitle {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="glow-text">Welcome to Philippine Countryville College</h1>
+            <p class="glow-text-subtitle">Bachelor of Science in Information Technology</p>
+            <a href="contact.html" class="hire-button glow-button">Enroll Now</a>
+            <h2 class="explore glow-text">Empower Your Future in IT</h2>
+        </section>
+
+        <section class="info">
+            <h2>Why Choose BSIT at PCC?</h2>
+            <p>Our BSIT program offers a comprehensive curriculum designed to equip students with practical skills in programming, networking, and software development. At PCC, we provide state-of-the-art facilities and experienced faculty to support your learning journey.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>Modern Facilities</h3>
+                    <p>Experience hands-on learning in our computer labs with the latest technology.</p>
+                </div>
+                <div class="feature">
+                    <h3>Expert Faculty</h3>
+                    <p>Learn from highly qualified instructors with real-world IT experience.</p>
+                </div>
+                <div class="feature">
+                    <h3>Industry Connections</h3>
+                    <p>Gain internship opportunities and career connections through our partnerships with leading companies.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Philippine Countryville College - BSIT Program. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

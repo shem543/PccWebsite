@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About PCC BSIT</title>
+  <style>
+    /* GLOBAL STYLES */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      background: url("images/397c71de-0b4e-4e4c-a2ea-e25bdf6bbf0f (1).jpeg") no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      background-color: #000;
+      position: relative;
+    }
+
+    /* Dark overlay to slightly improve text readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.35); /* reduced opacity so background is more visible */
+      z-index: -1;
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      text-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00ffee;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 1);
+    }
+
+    /* MAIN CONTENT */
+    main {
+      padding: 20px;
+    }
+
+    /* Removed big black frame */
+    .about-content {
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    }
+
+    /* Small text boxes remain */
+    .text-box {
+      background: rgba(10, 10, 10, 0.8);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 10px;
+      padding: 25px;
+      margin: 25px 0;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .text-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    a {
+      color: #00faff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #00faff;
+    }
+
+    /* CAREER ICONS */
+    .career-gallery {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .career-gallery .icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .career-item {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 10px;
+      width: 180px;
+      padding: 25px 15px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      transition: 0.3s;
+    }
+
+    .career-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+    }
+
+    .career-item svg {
+      width: 60px;
+      height: 60px;
+      color: #00ffee;
+      margin-bottom: 10px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .career-gallery .icons {
+        flex-direction: column;
+      }
+
+      .career-item {
+        width: 70%;
+        max-width: 250px;
+      }
+
+      .about-content {
+        padding: 25px;
+      }
+    }
+  </style>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="event.html">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-content">
+      <h1>About the BSIT Program</h1>
+
+      <div class="text-box">
+        <p>
+          Welcome to the <strong>Bachelor of Science in Information Technology (BSIT)</strong> program at <strong>Philippine Countryville College</strong>.
+          Our program equips students with technical skills and an innovative mindset for success in today’s digital world.
+        </p>
+      </div>
+
+      <div class="text-box">
+        <p>
+          PCC emphasizes hands-on learning, projects, and internships to prepare students for real-world challenges. Whether your goal is to become a
+          software developer, cybersecurity analyst, or IT manager, the BSIT program provides a strong foundation.
+        </p>
+      </div>
+
+      <div class="text-box">
+        <h2>Why Choose PCC BSIT?</h2>
+        <ul>
+          <li><strong>Modern Curriculum:</strong> Stay up-to-date with cutting-edge IT trends.</li>
+          <li><strong>Experienced Faculty:</strong> Learn from professionals with real-world experience.</li>
+          <li><strong>Internships:</strong> Get practical exposure through industry partnerships.</li>
+          <li><strong>Career Guidance:</strong> Receive mentorship and job placement support.</li>
+        </ul>
+      </div>
+
+      <div class="career-gallery">
+        <h2>BSIT Career Paths</h2>
+        <div class="icons">
+          <div class="career-item">
+            <i data-lucide="code"></i>
+            <p>Software Developer</p>
+          </div>
+          <div class="career-item">
+            <i data-lucide="globe"></i>
+            <p>Web Developer</p>
+          </div>
+          <div class="career-item">
+            <i data-lucide="shield"></i>
+            <p>Cybersecurity Analyst</p>
+          </div>
+          <div class="career-item">
+            <i data-lucide="database"></i>
+            <p>Data Analyst</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align:center; padding:15px; background:rgba(0,0,0,0.9); border-top:1px solid rgba(0,255,255,0.3); color:#ccc;">
+    <p>&copy; 2025 Philippine Countryville College - BSIT Program</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

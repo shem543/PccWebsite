@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSIT at PCC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background: url('images/165db189-ff0d-43e4-bf35-5809ca4384f3.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVIGATION STYLES */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #00ffee;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: #00ffee;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Responsive Navigation */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(0,0,0,0.85);
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 15px 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .glow-text {
+      font-size: 48px;
+      text-shadow: 0 0 20px #ff0055;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    .glow-text-subtitle {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
+    .hire-button {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px #0072ff;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .hire-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #00c6ff;
+    }
+
+    /* INFO SECTION */
+    .info {
+      padding: 60px 40px;
+      background: rgba(0, 0, 0, 0.8);
+      margin: 40px auto;
+      border-radius: 10px;
+      max-width: 1100px;
+    }
+
+    .info h2 {
+      font-size: 36px;
+      color: #00ffee;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .feature {
+      background-color: rgba(20, 20, 20, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      width: 30%;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      transition: 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    }
+
+    .feature h3 {
+      color: #00ffee;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      font-size: 14px;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #ff0000; }
+      100% { text-shadow: 0 0 30px #ff0000; }
+    }
+
+    @media (max-width: 768px) {
+      .feature {
+        width: 100%;
+      }
+
+      .glow-text {
+        font-size: 32px;
+      }
+
+      .glow-text-subtitle {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav>
+      <div class="logo">PCC - BSIT</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="achievements.html">Student Achievements</a></li>
+    <li><a href="event.html">Event Activities</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <h1 class="glow-text">Welcome to Philippine Countryville College</h1>
+      <p class="glow-text-subtitle">Bachelor of Science in Information Technology</p>
+      <a href="contact.html" class="hire-button">Enroll Now</a>
+      <h2 class="explore glow-text">Empower Your Future in IT</h2>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info">
+      <h2>Why Choose BSIT at PCC?</h2>
+      <p>Our BSIT program offers a comprehensive curriculum designed to equip students with practical skills in programming, networking, and software development. At PCC, we provide state-of-the-art facilities and experienced faculty to support your learning journey.</p>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Modern Facilities</h3>
+          <p>Experience hands-on learning in our computer labs with the latest technology.</p>
+        </div>
+        <div class="feature">
+          <h3>Expert Faculty</h3>
+          <p>Learn from highly qualified instructors with real-world IT experience.</p>
+        </div>
+        <div class="feature">
+          <h3>Industry Connections</h3>
+          <p>Gain internship opportunities and career connections through our partnerships with leading companies.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Philippine Countryville College - BSIT Program. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

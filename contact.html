@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - PCC BSIT</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* LED-inspired styling for Contact page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('file:///D:/WalagWebsite/images/3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
+            transition: text-shadow 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            text-shadow: 0 0 10px rgba(0, 255, 255, 1);
+        }
+
+        .contact-content {
+            padding: 50px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        label {
+            margin-bottom: 5px;
+            text-align: left;
+            font-weight: bold;
+            color: #00faff;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+        }
+
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        input:focus, textarea:focus {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+        }
+
+        button {
+            background-color: #00faff;
+            color: #111;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #008cff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="achievements.html">Student Achievements</a></li>
+    <li><a href="event.html">Event Activities</a></li>
+  </ul>
+</nav>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-content">
+            <h1>Contact Us</h1>
+            <p>Have questions? Feel free to get in touch with us. We’d be happy to assist you!</p>
+            
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> info@pccbsit.edu.ph</p>
+                <p><strong>📞 Phone:</strong> +63 912 345 6789</p>
+                <p><strong>📍 Address:</strong> Philippine Countryville College, BSIT Department</p>
+            </div>
+
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

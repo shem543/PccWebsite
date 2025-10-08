@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses - PCC</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 100px 20px;
+            background-image: url('images/771ddf33-677b-4916-80a9-9bf86bb8159a.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: darken;
+            text-align: center;
+        }
+
+        .glow-text {
+            font-size: 48px;
+            text-shadow: 0 0 20px #00ffcc;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .glow-text-subtitle {
+            font-size: 24px;
+            text-shadow: 0 0 10px #ffcc00;
+        }
+
+        .courses {
+            padding: 40px;
+            background-color: #111;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #00ffcc;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .course-item {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .course-item:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #00ffcc; }
+            100% { text-shadow: 0 0 30px #00ffcc; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="achievements.html">Student Achievements</a></li>
+    <li><a href="event.html">Event Activities</a></li>
+  </ul>
+</nav>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="left-side">
+                <h1 class="glow-text">Explore Our IT Courses at PCC</h1>
+                <p class="glow-text-subtitle">Enhance your career with our industry-relevant programs.</p>
+            </div>
+        </section>
+
+        <section class="courses">
+            <h2 class="section-title">Our Programs</h2>
+            <div class="course-list">
+                <div class="course-item">
+                    <h3>Bachelor of Science in Information Technology</h3>
+                    <p>Learn the fundamentals of software development, database management, and cybersecurity with hands-on training.</p>
+                </div>
+                <div class="course-item">
+                    <h3>Computer Networking and Security</h3>
+                    <p>Gain skills in configuring networks, cybersecurity protocols, and ethical hacking techniques.</p>
+                </div>
+                <div class="course-item">
+                    <h3>Web Development and Design</h3>
+                    <p>Master front-end and back-end technologies to build responsive websites and web applications.</p>
+                </div>
+                <div class="course-item">
+                    <h3>Data Science and AI</h3>
+                    <p>Explore machine learning algorithms, data analysis, and AI development with real-world projects.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Philippine Countryville College - BSIT Program. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
