@@ -10,16 +10,15 @@
       padding: 0;
       font-family: 'Poppins', sans-serif;
       color: white;
-      background: url("images/397c71de-0b4e-4e4c-a2ea-e25bdf6bbf0f (1).jpeg") no-repeat center center fixed;
+      background: url("https://raw.githubusercontent.com/shem543/PccWebsite/main/397c71de-0b4e-4e4c-a2ea-e25bdf6bbf0f%20(1).jpeg") no-repeat center center fixed;
       background-size: cover;
     }
 
-    /* Navigation Bar */
     header {
       width: 100%;
       background: rgba(0, 0, 0, 0.9);
       padding: 10px 0;
-      position: fixed; /* stays at top */
+      position: fixed;
       top: 0;
       left: 0;
       z-index: 1000;
@@ -41,7 +40,7 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #ffcc00; /* link color */
+      color: #ffcc00;
       font-weight: bold;
       text-shadow: 0 0 5px #ffcc00;
       transition: color 0.3s, text-shadow 0.3s;
@@ -49,19 +48,18 @@
     }
 
     nav ul li a:hover {
-      color: #ffffff; /* hover color */
+      color: #ffffff;
       text-shadow: 0 0 10px #ffcc00;
     }
 
-    /* Main content padding to avoid overlap with fixed nav */
     main {
-      padding-top: 90px; /* adjust based on header height */
+      padding-top: 90px;
     }
 
     .achievements {
       text-align: center;
       padding: 60px 20px;
-      background-color: rgba(0, 0, 0, 0.35); /* slightly transparent */
+      background-color: rgba(0, 0, 0, 0.35);
       border-radius: 10px;
       margin: 40px auto;
       max-width: 1200px;
@@ -97,7 +95,6 @@
       box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
     }
 
-    /* Lightbox styles */
     #lightbox {
       position: fixed;
       display: none;
@@ -118,7 +115,6 @@
       box-shadow: 0 0 20px #00ffee;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .gallery img {
         max-width: 90%;
@@ -162,16 +158,15 @@
     <section class="achievements">
       <h1>Student Achievements</h1>
       <div class="gallery">
-       <img src="D:\WalagWebsite\Student Achievements images\a678ae2a-8461-42e9-8540-35c769609d9c.jpeg">
-        <img src="D:\WalagWebsite\Student Achievements images\c7984e22-ea5d-405f-b0cd-dd5fb558e063.jpeg">
-        <img src="D:\WalagWebsite\Student Achievements images\406e5bfc-3e97-4ee5-a96e-99fed8391e61.jpeg">
-        <img src="D:\WalagWebsite\Student Achievements images\cb4507e5-6d97-4e57-af75-cafc9d1766e0.jpeg">
-        <img src="D:\WalagWebsite\Student Achievements images\863ffe27-e919-4f57-ac95-02711caf63b4.jpeg">
+        <img src="https://raw.githubusercontent.com/shem543/PccWebsite/main/a678ae2a-8461-42e9-8540-35c769609d9c.jpeg" alt="Achievement 1">
+        <img src="https://raw.githubusercontent.com/shem543/PccWebsite/main/c7984e22-ea5d-405f-b0cd-dd5fb558e063.jpeg" alt="Achievement 2">
+        <img src="https://raw.githubusercontent.com/shem543/PccWebsite/main/406e5bfc-3e97-4ee5-a96e-99fed8391e61.jpeg" alt="Achievement 3">
+        <img src="https://raw.githubusercontent.com/shem543/PccWebsite/main/cb4507e5-6d97-4e57-af75-cafc9d1766e0.jpeg" alt="Achievement 4">
+        <img src="https://raw.githubusercontent.com/shem543/PccWebsite/main/863ffe27-e919-4f57-ac95-02711caf63b4.jpeg" alt="Achievement 5">
       </div>
     </section>
   </main>
 
-  <!-- Lightbox container -->
   <div id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="">
   </div>
@@ -181,7 +176,6 @@
   </footer>
 
   <script>
-    // Lightbox functionality
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const images = document.querySelectorAll('.gallery img');
